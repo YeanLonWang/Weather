@@ -17,5 +17,12 @@
         "psr-4": {
             "Wangyanlong\\Weather\\": "./src/"
         }
+    },
+    "extra":{
+        "laravel":{
+            "providers":[
+                "Wangyanlong\\Weather\\ServiceProvider"
+            ]
+        }
     }
 }
