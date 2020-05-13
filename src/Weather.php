@@ -17,7 +17,7 @@ use Wangyanlong\Weather\Exceptions\InvalidArgumentException;
 class Weather
 {
     protected $key;
-    protected $guzzleOptons = [];
+    protected $guzzleOptions = [];
 
     public function __construct(string $key)
     {
@@ -26,12 +26,12 @@ class Weather
 
     public function getHttpClient()
     {
-        return new Client($this->guzzleOptons);
+        return new Client($this->guzzleOptions);
     }
 
     public function setGuzzleOptions(array $options)
     {
-        $this->guzzleOptons = $options;
+        $this->guzzleOptions = $options;
     }
 
     public function getWeather($city, $type = 'base', $format = 'json')
